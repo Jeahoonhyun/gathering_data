@@ -1,0 +1,4667 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>테이블 정의서(HTML)-SGIS</title>
+<style type="text/css">
+<!--
+.entity{
+	width: 1024px;
+	margin-bottom: 50px;
+	page-break-before: always;
+}
+.entity-header tr td, .entity-header tr th{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: top;
+}
+.entity-header{
+	border-spacing: 0px;
+	border-top: solid 2px black;
+	margin:0px;
+}
+.column-list{
+	width: 100%;
+	border-spacing: 0px;
+	margin: 0px;
+	border-bottom: solid 2px black;
+}
+.column-list th{
+	border-bottom: solid 2px black;
+	border-top: solid 2px black;
+	text-align: left;
+}
+.column-list th, .column-list td{
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: top;
+}
+.under-line{
+	border-bottom: solid 1px gray;
+}
+.right-line{
+	border-right: solid 1px gray;
+}
+.left-line{
+	border-left: solid 1px gray;
+}
+th{
+	background-color: #eee;
+}
+-->
+</style>
+</head>
+<body>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">워크넷_구인_목록<br>(SRV_DT_WORKNET_MASTER)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_WORKNET_MASTER</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">JO_AUTH_NO</td>
+						<td class="right-line">구인인증번호</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CORP_NM</td>
+						<td class="right-line">회사명</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">BSNM_NO</td>
+						<td class="right-line">사업자번호</td>
+						<td class="right-line">CHAR(13)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">RECRU_TITLE</td>
+						<td class="right-line">채용제목</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">WAGE_TYPE</td>
+						<td class="right-line">임금형태</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">SALARY_RAW</td>
+						<td class="right-line">급여원시</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">WORK_REGION</td>
+						<td class="right-line">근무지역</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">WORK_TYPE_RAW</td>
+						<td class="right-line">근무형태원시</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">MIN_ACDMCR</td>
+						<td class="right-line">최소학력</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">MAX_ACDMCR</td>
+						<td class="right-line">최대학력</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">CAREER</td>
+						<td class="right-line">경력</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">CLOS_DT</td>
+						<td class="right-line">마감일자</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">INFO_PROVD_OFFIC</td>
+						<td class="right-line">정보제공처</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">RECRU_ROBOT_URL</td>
+						<td class="right-line">채용로봇URL</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">WORK_ZIP</td>
+						<td class="right-line">근무우편번호</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">WORK_RDNMADR</td>
+						<td class="right-line">근무도로명주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">WORK_BASS_ADRES</td>
+						<td class="right-line">근무기본주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">WORK_DETAIL_ADRES</td>
+						<td class="right-line">근무상세주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">CREATE_DT</td>
+						<td class="right-line">생성일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">워크넷_구인_상세<br>(SRV_DT_WORKNET_DETAIL)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_WORKNET_DETAIL</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">JO_AUTH_NO</td>
+						<td class="right-line">구인인증번호</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line">PFK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CORP_NM</td>
+						<td class="right-line">회사명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">MAIN_NM</td>
+						<td class="right-line">대표자명</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">LABRR_CNT</td>
+						<td class="right-line">근로자수</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">CAP</td>
+						<td class="right-line">자본금</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">YEAR_SALES</td>
+						<td class="right-line">연매출액</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">BIZ_NM</td>
+						<td class="right-line">업종명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">MAIN_BIZ_CONTENT</td>
+						<td class="right-line">주요사업내용</td>
+						<td class="right-line">VARCHAR2(1000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">CORP_ADDR</td>
+						<td class="right-line">회사주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">CORP_HPAGE</td>
+						<td class="right-line">회사홈페이지</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">CORP_SZ</td>
+						<td class="right-line">회사규모</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">RCRIT_JSSFC</td>
+						<td class="right-line">모집직종</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">JO_TITLE</td>
+						<td class="right-line">구인제목</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">REL_JSSFC</td>
+						<td class="right-line">관련직종</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">DTY_CONTENT</td>
+						<td class="right-line">직무내용</td>
+						<td class="right-line">VARCHAR2(1000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">RCEPT_CLOS_DT</td>
+						<td class="right-line">접수마감일</td>
+						<td class="right-line">VARCHAR2(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">EMPLYM_TYPE_RAW</td>
+						<td class="right-line">고용형태원시</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">RCRIT_PSN</td>
+						<td class="right-line">모집인원</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">WAGE_CND</td>
+						<td class="right-line">임금조건</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">CAREER_CND</td>
+						<td class="right-line">경력조건</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">21</td>
+						<td class="right-line">ACDMCR_RAW</td>
+						<td class="right-line">학력원시</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">22</td>
+						<td class="right-line">FGGG</td>
+						<td class="right-line">외국어</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">23</td>
+						<td class="right-line">MAJOR</td>
+						<td class="right-line">전공</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">24</td>
+						<td class="right-line">QUALF_LCNS</td>
+						<td class="right-line">자격면허</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">25</td>
+						<td class="right-line">MLTPWR_EXCPT_RECRU_HOPE</td>
+						<td class="right-line">병력특례채용희망</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">26</td>
+						<td class="right-line">CMPUTR_PRCUSE_ABLTY</td>
+						<td class="right-line">컴퓨터활용능력</td>
+						<td class="right-line">VARCHAR2(1000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">27</td>
+						<td class="right-line">PVLTRT_CND</td>
+						<td class="right-line">우대조건</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">28</td>
+						<td class="right-line">ETC_PVLTRT_CND</td>
+						<td class="right-line">기타우대조건</td>
+						<td class="right-line">VARCHAR2(1000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">29</td>
+						<td class="right-line">RECRU_MTH</td>
+						<td class="right-line">채용방법</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">30</td>
+						<td class="right-line">RCEPT_MTH</td>
+						<td class="right-line">접수방법</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">31</td>
+						<td class="right-line">SUBMIT_PAPERS_PRPARE</td>
+						<td class="right-line">제출서류준비</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">32</td>
+						<td class="right-line">ETC_GUIDANCE</td>
+						<td class="right-line">기타안내</td>
+						<td class="right-line">VARCHAR2(4000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">33</td>
+						<td class="right-line">WORK_INTSPT</td>
+						<td class="right-line">근무예정지</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">34</td>
+						<td class="right-line">PSITN_IRSTT</td>
+						<td class="right-line">소속산업단지</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">35</td>
+						<td class="right-line">NEARBY_ECLW_STATION</td>
+						<td class="right-line">인근전철역</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">36</td>
+						<td class="right-line">WORK_TIME</td>
+						<td class="right-line">근무시간</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">37</td>
+						<td class="right-line">ANNTY_FEINSR</td>
+						<td class="right-line">연금4대보험</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">38</td>
+						<td class="right-line">RTRPAY</td>
+						<td class="right-line">퇴직금</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">39</td>
+						<td class="right-line">ETC_WLFARE</td>
+						<td class="right-line">기타복리후생</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">40</td>
+						<td class="right-line">DSPSN_CVNTL</td>
+						<td class="right-line">장애인편의시설</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">41</td>
+						<td class="right-line">RECRU_DEPT</td>
+						<td class="right-line">채용부서</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">42</td>
+						<td class="right-line">TEL_NO</td>
+						<td class="right-line">전화번호</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">43</td>
+						<td class="right-line">FAX_NO</td>
+						<td class="right-line">팩스번호</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">44</td>
+						<td class="right-line">CREATE_DT</td>
+						<td class="right-line">생성일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">오늘의구인현황정제<br>(SRV_DT_JOB_SM_REFINE)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_SM_REFINE</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">JO_NO</td>
+						<td class="right-line">구인번호</td>
+						<td class="right-line">CHAR(20)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CORP_NM</td>
+						<td class="right-line">회사명</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">BSNM_NO</td>
+						<td class="right-line">사업자번호</td>
+						<td class="right-line">CHAR(13)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">INDUST_CLASS</td>
+						<td class="right-line">산업분류</td>
+						<td class="right-line">VARCHAR2(6)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">ENTRPRS_TYPE</td>
+						<td class="right-line">기업형태</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">CORP_SZ</td>
+						<td class="right-line">회사규모</td>
+						<td class="right-line">VARCHAR2(4)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">LABRR_CNT</td>
+						<td class="right-line">근로자수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">CORP_ADDR</td>
+						<td class="right-line">회사주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">CAP</td>
+						<td class="right-line">자본금</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">MAIN_NM</td>
+						<td class="right-line">대표자명</td>
+						<td class="right-line">VARCHAR2(60)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">YEAR_SALES</td>
+						<td class="right-line">연매출액</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">MAIN_BIZ_CONTENT</td>
+						<td class="right-line">주요사업내용</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">CORP_HPAGE</td>
+						<td class="right-line">회사홈페이지</td>
+						<td class="right-line">VARCHAR2(120)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">RECRU_NM</td>
+						<td class="right-line">채용명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">CAREER</td>
+						<td class="right-line">경력</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">ACDMCR</td>
+						<td class="right-line">학력</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">WAGE_TYPE</td>
+						<td class="right-line">임금형태</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">SALARY</td>
+						<td class="right-line">급여</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">WORK_TYPE</td>
+						<td class="right-line">근무형태</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">EMPLYM_TYPE</td>
+						<td class="right-line">고용형태</td>
+						<td class="right-line">VARCHAR2(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">21</td>
+						<td class="right-line">RCRIT_JSSFC</td>
+						<td class="right-line">모집직종</td>
+						<td class="right-line">VARCHAR2(6)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">22</td>
+						<td class="right-line">RCRIT_PSN</td>
+						<td class="right-line">모집인원</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">23</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">24</td>
+						<td class="right-line">CLOS_DT</td>
+						<td class="right-line">마감일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">25</td>
+						<td class="right-line">JO_DATA_DIV</td>
+						<td class="right-line">구인자료구분</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line">FK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">26</td>
+						<td class="right-line">JO_DATA_KEY</td>
+						<td class="right-line">구인자료키</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line">FK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">27</td>
+						<td class="right-line">WORK_REGION</td>
+						<td class="right-line">근무지역</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">28</td>
+						<td class="right-line">WORK_ADDR</td>
+						<td class="right-line">근무주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">29</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">30</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">31</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">32</td>
+						<td class="right-line">RID</td>
+						<td class="right-line">RID</td>
+						<td class="right-line">VARCHAR2(5)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">33</td>
+						<td class="right-line">X</td>
+						<td class="right-line">X</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">34</td>
+						<td class="right-line">Y</td>
+						<td class="right-line">Y</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">35</td>
+						<td class="right-line">MAPPING_STATUS</td>
+						<td class="right-line">MAPPING_STATUS</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">36</td>
+						<td class="right-line">API_NAME</td>
+						<td class="right-line">API_NAME</td>
+						<td class="right-line">VARCHAR2(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">37</td>
+						<td class="right-line">ADDR</td>
+						<td class="right-line">ADDR</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">38</td>
+						<td class="right-line">TOT_OA_CD</td>
+						<td class="right-line">TOT_OA_CD</td>
+						<td class="right-line">VARCHAR2(15)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">39</td>
+						<td class="right-line">TOT_X</td>
+						<td class="right-line">TOT_X</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">40</td>
+						<td class="right-line">TOT_Y</td>
+						<td class="right-line">TOT_Y</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">41</td>
+						<td class="right-line">PNU</td>
+						<td class="right-line">PNU</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">42</td>
+						<td class="right-line">MGT</td>
+						<td class="right-line">MGT</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">43</td>
+						<td class="right-line">CREATE_DT</td>
+						<td class="right-line">생성일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">희망지역_구인_현황<br>(SRV_DT_JOB_HOPE_AREA_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_HOPE_AREA_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">기업형태_구인_현황<br>(SRV_DT_JOB_ENTRPRS_TYPE_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_ENTRPRS_TYPE_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">ENTRPRS_TYPE</td>
+						<td class="right-line">기업형태</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">회사규모_구인_현황<br>(SRV_DT_JOB_CORP_SZ_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_CORP_SZ_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">CORP_SZ</td>
+						<td class="right-line">회사규모</td>
+						<td class="right-line">VARCHAR2(4)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">산업분류_구인_현황<br>(SRV_DT_JOB_INDUST_CLASS_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_INDUST_CLASS_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">INDUST_CLASS</td>
+						<td class="right-line">산업분류</td>
+						<td class="right-line">VARCHAR2(6)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">직종분류_구인_현황<br>(SRV_DT_JOB_JSSFC_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_JSSFC_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">JSSFC_CLASS</td>
+						<td class="right-line">직종분류</td>
+						<td class="right-line">VARCHAR2(6)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">급여수준_구인_현황<br>(SRV_DT_JOB_SALARY_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_SALARY_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">WAGE_TYPE</td>
+						<td class="right-line">임금형태</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">SALARY</td>
+						<td class="right-line">급여</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">고용형태_구인_현황<br>(SRV_DT_JOB_EMPLYM_TYPE_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_EMPLYM_TYPE_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">EMPLYM_TYPE</td>
+						<td class="right-line">고용형태</td>
+						<td class="right-line">VARCHAR2(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">근무형태_구인_현황<br>(SRV_DT_JOB_WORK_TYPE_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_WORK_TYPE_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">WORK_TYPE</td>
+						<td class="right-line">근무형태</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">학력_구인_현황<br>(SRV_DT_JOB_ACDMCR_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_ACDMCR_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">ACDMCR</td>
+						<td class="right-line">학력</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">경력_구인_현황<br>(SRV_DT_JOB_CAREER_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_CAREER_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">CAREER</td>
+						<td class="right-line">경력</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">JO_CNT</td>
+						<td class="right-line">구인건수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">CORP_CNT</td>
+						<td class="right-line">업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">RCRIT_PSN_CNT</td>
+						<td class="right-line">모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">구인현황판<br>(SRV_DT_JOB_BOARD_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_BOARD_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">ALL_JO_CNT</td>
+						<td class="right-line">전체구인수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">ALL_CORP_CNT</td>
+						<td class="right-line">전체업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">ALL_RCRIT_PSN_CNT</td>
+						<td class="right-line">전체모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">NEW_JO_CNT</td>
+						<td class="right-line">신규구인수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">NEW_CORP_CNT</td>
+						<td class="right-line">신규업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">NEW_RCRIT_PSN_CNT</td>
+						<td class="right-line">신규모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">CLOS_JO_CNT</td>
+						<td class="right-line">마감구인수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">CLOS_CORP_CNT</td>
+						<td class="right-line">마감업체수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">CLOS_RCRIT_PSN_CNT</td>
+						<td class="right-line">마감모집인원수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">인크루트_구인_수집<br>(SRV_DT_INCRUIT_JSON)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_INCRUIT_JSON</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">PBLANC_NO</td>
+						<td class="right-line">공고번호</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">ENTRPRS_NM</td>
+						<td class="right-line">기업명</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">BIZ_NM</td>
+						<td class="right-line">업종명</td>
+						<td class="right-line">VARCHAR2(1000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">CORP_ADDR</td>
+						<td class="right-line">회사주소</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">BSNM_NO</td>
+						<td class="right-line">사업자번호</td>
+						<td class="right-line">CHAR(13)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">ENTRPRS_TYPE_RAW</td>
+						<td class="right-line">기업형태원시</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">NWMB_YN</td>
+						<td class="right-line">신입여부</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">CAREER_YN</td>
+						<td class="right-line">경력여부</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">RCRIT_CLOS</td>
+						<td class="right-line">모집마감</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">CLOS_DT</td>
+						<td class="right-line">마감일자</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">RCRIT_DT</td>
+						<td class="right-line">모집일자</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">CAREER</td>
+						<td class="right-line">경력</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">PBLANC_NM</td>
+						<td class="right-line">공고명</td>
+						<td class="right-line">VARCHAR2(1000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">RCRIT_JSSFC_LIST</td>
+						<td class="right-line">모집직종목록</td>
+						<td class="right-line">VARCHAR2(3000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">RCRIT_REGION_LIST</td>
+						<td class="right-line">모집지역목록</td>
+						<td class="right-line">VARCHAR2(1000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">ANSLRY_1</td>
+						<td class="right-line">연봉1</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">ANSLRY_2</td>
+						<td class="right-line">연봉2</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">ANSLRY_DSCSS</td>
+						<td class="right-line">연봉협의</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">EMPLYM_TYPE_RAW</td>
+						<td class="right-line">고용형태원시</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">ACDMCR_RAW</td>
+						<td class="right-line">학력원시</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">21</td>
+						<td class="right-line">RCRIT_PSN</td>
+						<td class="right-line">모집인원</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">22</td>
+						<td class="right-line">QUALF_LCNS</td>
+						<td class="right-line">자격면허</td>
+						<td class="right-line">VARCHAR2(2000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">23</td>
+						<td class="right-line">RCRIT_START_DT</td>
+						<td class="right-line">모집시작일</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">24</td>
+						<td class="right-line">NEARBY_ECLW_STATION</td>
+						<td class="right-line">인근전철역</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">25</td>
+						<td class="right-line">PBLANC_URL</td>
+						<td class="right-line">공고URL</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">26</td>
+						<td class="right-line">CREATE_DT</td>
+						<td class="right-line">생성일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">일자리통계자료수집<br>(SRV_DT_KOSIS_DATA)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_KOSIS_DATA</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">ITM_ID</td>
+						<td class="right-line">아이템식별자</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">ORG_ID</td>
+						<td class="right-line">조직식별자</td>
+						<td class="right-line">VARCHAR2(5)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">TBL_ID</td>
+						<td class="right-line">테이블식별자</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">DT</td>
+						<td class="right-line">일자</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">LINK_ID</td>
+						<td class="right-line">연계ID</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">PRD_DE</td>
+						<td class="right-line">수록시점</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">C1</td>
+						<td class="right-line">분류1</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">ITM_NM</td>
+						<td class="right-line">아이템명칭</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">ITM_NM_ENG</td>
+						<td class="right-line">아이템명칭영어</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">PRD_SE</td>
+						<td class="right-line">수록주기</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">TBL_NM</td>
+						<td class="right-line">테이블명칭</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">UNIT_NM</td>
+						<td class="right-line">단위명</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">UNIT_NM_ENG</td>
+						<td class="right-line">단위명영문</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">C1_NM</td>
+						<td class="right-line">분류1명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">C1_NM_ENG</td>
+						<td class="right-line">분류1명영문</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">C1_OBJ_NM</td>
+						<td class="right-line">분류값1명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">C1_OBJ_NM_ENG</td>
+						<td class="right-line">분류값1명영문</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">C2</td>
+						<td class="right-line">분류2</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">C2_NM</td>
+						<td class="right-line">분류2명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">C2_NM_ENG</td>
+						<td class="right-line">분류2명영문</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">21</td>
+						<td class="right-line">C2_OBJ_NM</td>
+						<td class="right-line">분류값2명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">22</td>
+						<td class="right-line">C2_OBJ_NM_ENG</td>
+						<td class="right-line">분류값2명영문</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">23</td>
+						<td class="right-line">C3</td>
+						<td class="right-line">분류3</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">24</td>
+						<td class="right-line">C3_NM</td>
+						<td class="right-line">분류3명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">25</td>
+						<td class="right-line">C3_NM_ENG</td>
+						<td class="right-line">분류3명영문</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">26</td>
+						<td class="right-line">C3_OBJ_NM</td>
+						<td class="right-line">분류값3명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">27</td>
+						<td class="right-line">C3_OBJ_NM_ENG</td>
+						<td class="right-line">분류값3명영문</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">28</td>
+						<td class="right-line">CREATE_DT</td>
+						<td class="right-line">생성일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">오늘의구인현황<br>(SRV_DT_JOB_SM)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_SM</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">JO_NO</td>
+						<td class="right-line">구인번호</td>
+						<td class="right-line">CHAR(20)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CORP_NM</td>
+						<td class="right-line">회사명</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">BSNM_NO</td>
+						<td class="right-line">사업자번호</td>
+						<td class="right-line">CHAR(13)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">INDUST_CLASS</td>
+						<td class="right-line">산업분류</td>
+						<td class="right-line">VARCHAR2(6)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">ENTRPRS_TYPE</td>
+						<td class="right-line">기업형태</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">CORP_SZ</td>
+						<td class="right-line">회사규모</td>
+						<td class="right-line">VARCHAR2(4)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">LABRR_CNT</td>
+						<td class="right-line">근로자수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">CORP_ADDR</td>
+						<td class="right-line">회사주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">CAP</td>
+						<td class="right-line">자본금</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">MAIN_NM</td>
+						<td class="right-line">대표자명</td>
+						<td class="right-line">VARCHAR2(60)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">YEAR_SALES</td>
+						<td class="right-line">연매출액</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">MAIN_BIZ_CONTENT</td>
+						<td class="right-line">주요사업내용</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">CORP_HPAGE</td>
+						<td class="right-line">회사홈페이지</td>
+						<td class="right-line">VARCHAR2(120)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">RECRU_NM</td>
+						<td class="right-line">채용명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">CAREER</td>
+						<td class="right-line">경력</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">ACDMCR</td>
+						<td class="right-line">학력</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">WAGE_TYPE</td>
+						<td class="right-line">임금형태</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">SALARY</td>
+						<td class="right-line">급여</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">WORK_TYPE</td>
+						<td class="right-line">근무형태</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">EMPLYM_TYPE</td>
+						<td class="right-line">고용형태</td>
+						<td class="right-line">VARCHAR2(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">21</td>
+						<td class="right-line">RCRIT_JSSFC</td>
+						<td class="right-line">모집직종</td>
+						<td class="right-line">VARCHAR2(6)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">22</td>
+						<td class="right-line">RCRIT_PSN</td>
+						<td class="right-line">모집인원</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">23</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">24</td>
+						<td class="right-line">CLOS_DT</td>
+						<td class="right-line">마감일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">25</td>
+						<td class="right-line">JO_DATA_DIV</td>
+						<td class="right-line">구인자료구분</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">26</td>
+						<td class="right-line">JO_DATA_KEY</td>
+						<td class="right-line">구인자료키</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">27</td>
+						<td class="right-line">WORK_REGION</td>
+						<td class="right-line">근무지역</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">28</td>
+						<td class="right-line">WORK_ADDR</td>
+						<td class="right-line">근무주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">29</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">30</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">31</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">32</td>
+						<td class="right-line">TOT_OA_CD</td>
+						<td class="right-line">집계구코드</td>
+						<td class="right-line">VARCHAR2(15)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">33</td>
+						<td class="right-line">X</td>
+						<td class="right-line">X</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">34</td>
+						<td class="right-line">Y</td>
+						<td class="right-line">Y</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">35</td>
+						<td class="right-line">PT</td>
+						<td class="right-line">포인트</td>
+						<td class="right-line">st_point</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">36</td>
+						<td class="right-line">CREATE_DT</td>
+						<td class="right-line">생성일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">오늘의구인현황중복제거<br>(SRV_DT_JOB_SM_DUPL_REMOVE)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_SM_DUPL_REMOVE</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">JO_NO</td>
+						<td class="right-line">구인번호</td>
+						<td class="right-line">CHAR(20)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">CORP_NM</td>
+						<td class="right-line">회사명</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">BSNM_NO</td>
+						<td class="right-line">사업자번호</td>
+						<td class="right-line">CHAR(13)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">INDUST_CLASS</td>
+						<td class="right-line">산업분류</td>
+						<td class="right-line">VARCHAR2(6)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">ENTRPRS_TYPE</td>
+						<td class="right-line">기업형태</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">CORP_SZ</td>
+						<td class="right-line">회사규모</td>
+						<td class="right-line">VARCHAR2(4)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">LABRR_CNT</td>
+						<td class="right-line">근로자수</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">CORP_ADDR</td>
+						<td class="right-line">회사주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">CAP</td>
+						<td class="right-line">자본금</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">MAIN_NM</td>
+						<td class="right-line">대표자명</td>
+						<td class="right-line">VARCHAR2(60)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">YEAR_SALES</td>
+						<td class="right-line">연매출액</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">MAIN_BIZ_CONTENT</td>
+						<td class="right-line">주요사업내용</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">CORP_HPAGE</td>
+						<td class="right-line">회사홈페이지</td>
+						<td class="right-line">VARCHAR2(120)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">RECRU_NM</td>
+						<td class="right-line">채용명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">CAREER</td>
+						<td class="right-line">경력</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">ACDMCR</td>
+						<td class="right-line">학력</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">WAGE_TYPE</td>
+						<td class="right-line">임금형태</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">SALARY</td>
+						<td class="right-line">급여</td>
+						<td class="right-line">BIGINT</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">WORK_TYPE</td>
+						<td class="right-line">근무형태</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">EMPLYM_TYPE</td>
+						<td class="right-line">고용형태</td>
+						<td class="right-line">VARCHAR2(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">21</td>
+						<td class="right-line">RCRIT_JSSFC</td>
+						<td class="right-line">모집직종</td>
+						<td class="right-line">VARCHAR2(6)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">22</td>
+						<td class="right-line">RCRIT_PSN</td>
+						<td class="right-line">모집인원</td>
+						<td class="right-line">INTEGER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">23</td>
+						<td class="right-line">REG_DT</td>
+						<td class="right-line">등록일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">24</td>
+						<td class="right-line">CLOS_DT</td>
+						<td class="right-line">마감일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">25</td>
+						<td class="right-line">JO_DATA_DIV</td>
+						<td class="right-line">구인자료구분</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">26</td>
+						<td class="right-line">JO_DATA_KEY</td>
+						<td class="right-line">구인자료키</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">27</td>
+						<td class="right-line">WORK_REGION</td>
+						<td class="right-line">근무지역</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">28</td>
+						<td class="right-line">WORK_ADDR</td>
+						<td class="right-line">근무주소</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">29</td>
+						<td class="right-line">SIDO_CD</td>
+						<td class="right-line">시도코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">30</td>
+						<td class="right-line">SGG_CD</td>
+						<td class="right-line">시군구코드</td>
+						<td class="right-line">CHAR(3)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">31</td>
+						<td class="right-line">EMDONG_CD</td>
+						<td class="right-line">읍면동코드</td>
+						<td class="right-line">CHAR(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">32</td>
+						<td class="right-line">RID</td>
+						<td class="right-line">RID</td>
+						<td class="right-line">VARCHAR2(5)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">33</td>
+						<td class="right-line">X</td>
+						<td class="right-line">X</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">34</td>
+						<td class="right-line">Y</td>
+						<td class="right-line">Y</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">35</td>
+						<td class="right-line">MAPPING_STATUS</td>
+						<td class="right-line">MAPPING_STATUS</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">36</td>
+						<td class="right-line">API_NAME</td>
+						<td class="right-line">API_NAME</td>
+						<td class="right-line">VARCHAR2(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">37</td>
+						<td class="right-line">ADDR</td>
+						<td class="right-line">ADDR</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">38</td>
+						<td class="right-line">TOT_OA_CD</td>
+						<td class="right-line">TOT_OA_CD</td>
+						<td class="right-line">VARCHAR2(15)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">39</td>
+						<td class="right-line">TOT_X</td>
+						<td class="right-line">TOT_X</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">40</td>
+						<td class="right-line">TOT_Y</td>
+						<td class="right-line">TOT_Y</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">41</td>
+						<td class="right-line">PNU</td>
+						<td class="right-line">PNU</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">42</td>
+						<td class="right-line">MGT</td>
+						<td class="right-line">MGT</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">43</td>
+						<td class="right-line">CREATE_DT</td>
+						<td class="right-line">생성일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">일자리통계 외부수집파일자료 원시<br>(SRV_DT_JOB_EXTERNAL_FILE_RAW)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_EXTERNAL_FILE_RAW</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">TBL_NM</td>
+						<td class="right-line">테이블명칭</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">ITM_NM</td>
+						<td class="right-line">아이템명칭</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">PRD_DE</td>
+						<td class="right-line">수록시점</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">AREA_11</td>
+						<td class="right-line">지역11</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">AREA_21</td>
+						<td class="right-line">지역21</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">AREA_22</td>
+						<td class="right-line">지역22</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">AREA_23</td>
+						<td class="right-line">지역23</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">AREA_24</td>
+						<td class="right-line">지역24</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">AREA_25</td>
+						<td class="right-line">지역25</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">AREA_26</td>
+						<td class="right-line">지역26</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">AREA_29</td>
+						<td class="right-line">지역29</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">AREA_31</td>
+						<td class="right-line">지역31</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">AREA_32</td>
+						<td class="right-line">지역32</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">14</td>
+						<td class="right-line">AREA_33</td>
+						<td class="right-line">지역33</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">15</td>
+						<td class="right-line">AREA_34</td>
+						<td class="right-line">지역34</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">16</td>
+						<td class="right-line">AREA_35</td>
+						<td class="right-line">지역35</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">17</td>
+						<td class="right-line">AREA_36</td>
+						<td class="right-line">지역36</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">18</td>
+						<td class="right-line">AREA_37</td>
+						<td class="right-line">지역37</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">19</td>
+						<td class="right-line">AREA_38</td>
+						<td class="right-line">지역38</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">20</td>
+						<td class="right-line">AREA_39</td>
+						<td class="right-line">지역39</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">21</td>
+						<td class="right-line">AREA_TOTAL</td>
+						<td class="right-line">지역총합</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">일자리통계자료정보<br>(SRV_DT_JOB_STAT_DATA_INFO)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOB_STAT_DATA_INFO</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">LINK_ID</td>
+						<td class="right-line">연계ID</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line">PK</td>
+						<td class="right-line"></td>
+						<td class="right-line">Not Null</td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">STAT_NM</td>
+						<td class="right-line">통계명</td>
+						<td class="right-line">VARCHAR2(200)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">STAT_DEFINITION</td>
+						<td class="right-line">통계정의</td>
+						<td class="right-line">VARCHAR2(1000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">STAT_EXP</td>
+						<td class="right-line">통계설명</td>
+						<td class="right-line">VARCHAR2(3000)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">COLCT_SOURCE</td>
+						<td class="right-line">수집출처</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">UPDT_CYCLE</td>
+						<td class="right-line">갱신주기</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">RECENT_UPDT_DE</td>
+						<td class="right-line">최근갱신일</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">STAT_PATH</td>
+						<td class="right-line">통계경로</td>
+						<td class="right-line">VARCHAR2(300)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">REFRN_URL</td>
+						<td class="right-line">참조URL</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">CREATE_DT</td>
+						<td class="right-line">생성일자</td>
+						<td class="right-line">CHAR(8)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">일자리보기자료공통<br>(SRV_DT_JOBSTAT_DATA)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">SRV_DT_JOBSTAT_DATA</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">TYPE</td>
+						<td class="right-line">형태</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">BASE_YEAR</td>
+						<td class="right-line">기초년도</td>
+						<td class="right-line">VARCHAR2(4)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">MODE</td>
+						<td class="right-line">모드</td>
+						<td class="right-line">VARCHAR2(2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">SERIES_CD</td>
+						<td class="right-line">시리즈코드</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">CATEGORY_CD</td>
+						<td class="right-line">카테고리코드</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">VAL</td>
+						<td class="right-line">값</td>
+						<td class="right-line">NUMBER(10,2)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">일자리보기맵핑공통<br>(TABLE)</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">20xx xx xx</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">TABLE</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">PK</th>
+						<th class="right-line">FK</th>
+						<th class="right-line">NULL</th>
+						<th >기본값</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">B_CLASS_CD_1</td>
+						<td class="right-line">대학급코드1</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">B_CLASS_CD_2</td>
+						<td class="right-line">대학급코드2</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">S_CLASS_CD_1</td>
+						<td class="right-line">소학급코드1</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">S_CLASS_CD_2</td>
+						<td class="right-line">소학급코드2</td>
+						<td class="right-line">VARCHAR2(10)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td ></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

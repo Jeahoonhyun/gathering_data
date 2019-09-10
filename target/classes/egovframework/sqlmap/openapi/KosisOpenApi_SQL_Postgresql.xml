@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="KosisOpenApiImportDAO">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>	
+	<typeAlias  alias="kosisOpenApiVO" type="sgis.openapi.service.KosisOpenApiVO"/>
+	
+	<!-- API90:워크넷 구인 자료 목록 저장  -->
+	<insert id="KosisOpenApiImportDAO.insertKosisData" parameterClass="kosisOpenApiVO" >
+		<![CDATA[
+			INSERT INTO srv_dt_kosis_data
+			( itm_id, itm_nm, itm_nm_eng, org_id, prd_de, prd_se, tbl_id, tbl_nm, dt, unit_nm, unit_nm_eng, c1, c1_nm, c1_nm_eng, c1_obj_nm, c1_obj_nm_eng, c2, c2_nm, c2_nm_eng, c2_obj_nm, c2_obj_nm_eng, c3, c3_nm, c3_nm_eng, c3_obj_nm, c3_obj_nm_eng, link_id, create_dt )
+			VALUES 
+			(#itm_id#, #itm_nm#, #itm_nm_eng#, #org_id#, #prd_de#, #prd_se#, #tbl_id#, #tbl_nm#, #dt#, #unit_nm#, #unit_nm_eng#, #c1#, #c1_nm#, #c1_nm_eng#, #c1_obj_nm#, #c1_obj_nm_eng#, #c2#, #c2_nm#, #c2_nm_eng#, #c2_obj_nm#, #c2_obj_nm_eng#, #c3#, #c3_nm#, #c3_nm_eng#, #c3_obj_nm#, #c3_obj_nm_eng#, #link_id#, TO_CHAR(now(),'yyyymmdd'));			
+		]]>
+	</insert>		
+	 				 
+</sqlMap>

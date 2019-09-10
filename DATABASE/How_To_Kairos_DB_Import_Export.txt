@@ -1,0 +1,13 @@
+1. cmd 접속
+cd C:\KairosInterface\Kairos\bin
+ 
+2. DB 접속
+kloader -h 192.168.0.207 -u root/root
+
+3. Export
+get -t SRV_DT_KOSIS_DATA -d SRV_DT_KOSIS_DATA.txt -f | -cp utf-8;
+get -t SRV_DT_JOB_STAT_DATA_INFO -d SRV_DT_JOB_STAT_DATA_INFO.txt -f | -cp utf-8;
+
+3. Import
+put -t SRV_DT_JOB_SM_HJH -d 01_20181217_SRV_DT_JOB_SM_2.txt -f | -cp utf-8 -error exit;
+put -t CMM_CD_COMCD -d 00_20181218_cmm_cd_comcd_2.txt -f | -cp utf-8 -error exit;

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace=".openapi">
+
+	<typeAlias  alias="egovMap" type="egovframework.rte.psl.dataaccess.util.EgovMap"/>
+	<typeAlias  alias="worknetOpenApiListVO" type="sgis.openapi.service.WorknetOpenApiListVO"/>			
+	<typeAlias  alias="worknetOpenApiDetailVO" type="sgis.openapi.service.WorknetOpenApiDetailVO"/>
+	<typeAlias  alias="OpenApiImportVO" type="sgis.openapi.service.PpaOpenApiImportVO"/>	
+	<typeAlias  alias="incruitApiVO" type="sgis.openapi.service.IncruitApiVO"/>
+	
+	<!-- API90:워크넷 구인 자료 목록 저장  -->
+	<insert id="OpenApiImportDAO.insertWorknetOpenApiList" parameterClass="worknetOpenApiListVO" >
+		<![CDATA[
+			INSERT INTO srv_dt_worknet_master
+			(jo_auth_no, corp_nm, bsnm_no, recru_title, wage_type_raw, salary_raw, work_region, work_type_raw, min_acdmcr, max_acdmcr, career_raw, reg_dt_raw, clos_dt_raw, info_provd_offic, recru_robot_url, work_zip, work_rdnmadr, work_bass_adres, work_detail_adres, create_dt)
+			VALUES
+			(#wantedAuthNo#,#company#,#busino#,#title#,#salTpNm#,#sal#,#region#,#holidayTpNm#,#minEdubg#,#maxEdubg#,#career#,#regDt#,#closeDt#,#infoSvc#,#wantedInfoUrl#,#zipCd#,#strtnmCd#,#basicAddr#,#detailAddr#,TO_CHAR(now(),'yyyymmdd'))			
+		]]>
+	</insert>
+	
+	<!-- API90:워크넷 구인 자료 상세 저장  -->
+	<insert id="OpenApiImportDAO.insertWorknetOpenApiDetail" parameterClass="worknetOpenApiDetailVO" >
+		<![CDATA[
+			INSERT INTO srv_dt_worknet_detail
+			(jo_auth_no, corp_nm, main_nm, labrr_cnt, cap, year_sales, biz_nm, main_biz_content, corp_addr, corp_hpage, corp_sz_raw, rcrit_jssfc_raw, jo_title, rel_jssfc, dty_content, rcept_clos_dt, emplym_type_raw, rcrit_psn_raw, wage_cnd, career_cnd, acdmcr_raw, fggg, major, qualf_lcns, mltpwr_excpt_recru_hope, cmputr_prcuse_ablty, pvltrt_cnd, etc_pvltrt_cnd, recru_mth, rcept_mth, submit_papers_prpare, etc_guidance, work_intspt, psitn_irstt, nearby_eclw_station, work_time, annty_feinsr, rtrpay, etc_wlfare, dspsn_cvntl, recru_dept, tel_no, fax_no, create_dt)
+			VALUES
+			(#wantedAuthNo#,#corpNm#,#reperNm#,#totPsncnt#,#capitalAmt#,#yrSalesAmt#,#indTpCdNm#,#busiCont#,#corpAddr#,#homePg#,#busiSize#,#jobsNm#,#wantedTitle#,#relJobsNm#,#jobCont#,#receiptCloseDt#,#empTpNm#,#collectPsncnt#,#salTpNm#,#enterTpNm#,#eduNm#,#forLang#,#major#,#certificate#,#mltsvcExcHope#,#compAbl#,#pfCond#,#etcPfCond#,#selMthd#,#rcptMthd#,#submitDoc#,#etcHopeCont#,#workRegion#,#indArea#,#nearLine#,#workdayWorkhrCont#,#fourIns#,#retirepay#,#etcWelfare#,#disableCvntl#,#empChargerDpt#,#contactTelno#,#chargerFaxNo#,TO_CHAR(now(),'yyyymmdd'))			
+		]]>
+	</insert>
+	
+	<!-- API95:인크루트 구인 자료 신규 저장  -->
+	<insert id="OpenApiImportDAO.insertIncruitApiJson" parameterClass="incruitApiVO" >
+		<![CDATA[
+			INSERT INTO srv_dt_incruit_json
+			( pblanc_no, entrprs_nm, biz_nm, corp_addr, bsnm_no, entrprs_type_raw, nwmb_yn, career_yn, rcrit_clos, clos_dt_raw, rcrit_dt, career_raw, pblanc_nm, rcrit_jssfc_list, rcrit_region_list, anslry_1, anslry_2, anslry_dscss, emplym_type_raw, acdmcr_raw, rcrit_psn_raw, qualf_lcns, nearby_eclw_station, pblanc_url, create_dt)
+			VALUES 
+			(#docId#,#companyNmCore#,#indusNmList#,#companyAddr#,#bizRegistNo#,#compScaleNm#,#empYnEntry#,#empYnExper#,#employLimitYn#,#inviteCloseDt#,#inviteStartDt#,#careerNm#,#jobTitle#,substring(#occuNmList#,1,2990),#regionNmList#,#salary1#,#salary2#,#salaryNegoYn#,#employTyNmList#,#scholNm#,#employCnt#,#licenseNmList#,#subwayNmList#,#linkUrl#,TO_CHAR(now(),'yyyymmdd'))			
+		]]>
+	</insert>
+	
+	<!-- API95:인크루트 구인 자료 목록 저장  -->
+	<insert id="OpenApiImportDAO.insertIncruitApiMaster" parameterClass="incruitApiVO" >
+		<![CDATA[
+			INSERT INTO srv_dt_incruit_master
+			( pblanc_no, emplym_type, nwmb_yn, mod_day, career_yn, anslry_2, anslry_1, entrprs_nm, pblanc_nm, career_2, reg_day, career_1, rcrit_end_dt, cfr_subway_station, anslry, rcrit_start_dt, career_demand_matter, biz_nm, rcrit_region_list, acdmcr_demand_matter, create_dt)
+			VALUES
+			( substring(#docId#,1,20),substring(#empTyNm#,1,100),substring(#empYnEntry#,1,10),substring(#modDate#,1,20),substring(#empYnExper#,1,20),substring(#salary2#,1,100),substring(#salary1#,1,100),substring(#companyNm#,1,500),substring(#jobTitle#,1,1000),substring(#careerYear2#,1,100),substring(#regDate#,1,20),substring(#careerYear1#,1,100),substring(#inviteclosedt#,1,20),substring(#subwayNmListSch#,1,2000),substring(#salaryNm#,1,1000),substring(#inviteStartDt#,1,20),substring(#careerRequire#,1,200),substring(#indusNmList#,1,1000),substring(#regionNmFullListSch#,1,200),substring(#scholRequire#,1,200),TO_CHAR(now(),'yyyymmdd'))			
+		]]>
+	</insert>
+	
+	<!-- API95:인크루트 구인 자료 상세 저장  -->
+	<insert id="OpenApiImportDAO.insertIncruitApiDetail" parameterClass="incruitApiVO" >
+		<![CDATA[
+			INSERT INTO public.srv_dt_incruit_detail
+			( pblanc_no, rcrit_jssfc_list, emplym_type, mod_day, rcrit_realm_list, pblanc_content, entrprs_nm, corp_addr, pblanc_nm, rcrit_end_dt, career_demand_matter, rcrit_region_list, acdmcr_demand_matter )
+			VALUES
+			( substring(#docId#,1,20),substring(#occuNmList#,1,2980),substring(#empTyNm#,1,98),substring(#modDate#,1,20),substring(#pstNmList#,1,490),substring(#jobCont#,1,4990),substring(#companyNm#,1,490),substring(#compAddr#,1,300),substring(#jobTitle#,1,998),substring(#inviteclosedt#,1,20),substring(#careerRequire#,1,200),substring(#regionNmFullListSch#,1,200),substring(#scholRequire#,1,200) )			
+		]]>
+	</insert>
+	 			
+	<insert id="OpenApiImportDAO.insertOpenApiInfo" parameterClass="OpenApiImportVO" >
+		<![CDATA[
+			INSERT INTO TN_OPENAPI_INFO
+			( OPENAPI_ID, CATEGORY, SOURCE_IS, URL, PORT, API_KEY, USED_YN, CREATE_DATE, CREATE_USER )
+			VALUES
+			( #openapiId#,#category#,#sourceIs#,#url#,#port#,#apiKey#,#usedYn#,NOW(),#userID# )			
+		]]>
+	</insert>
+	
+	<update id="OpenApiImportDAO.updateOpenApiInfo" parameterClass="OpenApiImportVO" >
+		<![CDATA[
+			UPDATE TN_OPENAPI_INFO
+			   SET SOURCE_IS = #sourceIs#
+			     , URL = #url#
+			     , PORT = #port#
+			     , API_KEY = #apiKey#
+			     , USED_YN = #usedYn#			     
+			 WHERE OPENAPI_ID = #openapiId#			
+		]]>
+	</update>		
+	
+	<select id="OpenApiImportDAO.selectOpenApiInfo" parameterClass="OpenApiImportVO" resultClass="OpenApiImportVO" >
+		<![CDATA[
+			SELECT A.CATEGORY AS category
+			     , B.CODE_NM AS categoryNm
+				 , A.SOURCE_IS AS sourceIs
+				 , A.URL AS url
+				 , A.PORT AS port
+				 , A.API_KEY AS apiKey
+				 , A.USED_YN AS usedYn
+				 , A.CREATE_DATE AS createDate
+				 , A.CREATE_USER AS userId
+				 , D.USER_NM AS userNm
+				 , A.OPENAPI_ID  AS openapiId
+				 , COUNT(A.OPENAPI_ID) OVER() AS totCount
+			  FROM TN_OPENAPI_INFO A 
+			       LEFT JOIN LETTCCMMNDETAILCODE B ON A.CATEGORY = B.CODE AND B.CODE_ID = 'COM031'
+				   LEFT JOIN COMVNUSERMASTER D ON A.CREATE_USER = D.USER_ID
+			 WHERE 1=1
+		]]>
+			<isEqual prepend="AND" property="searchCondition" compareValue="0">
+				<![CDATA[	B.CODE_NM LIKE CONCAT ('%', #searchKeyword#,'%') 		]]>
+			</isEqual>
+			<isEqual prepend="AND" property="searchCondition" compareValue="1">
+				<![CDATA[	A.SOURCE_IS LIKE CONCAT ('%', #searchKeyword#,'%') 		]]>
+			</isEqual>			
+		<![CDATA[
+			ORDER BY A.CREATE_DATE DESC, A.OPENAPI_ID
+			LIMIT #recordCountPerPage# OFFSET #firstIndex#
+		]]>				
+	</select>	
+	
+	<select id="OpenApiImportDAO.selectOpenApiInfoDetail" parameterClass="OpenApiImportVO" resultClass="OpenApiImportVO" >
+		<![CDATA[
+			SELECT A.CATEGORY AS category
+			     , B.CODE_NM AS categoryNm
+				 , A.SOURCE_IS AS sourceIs
+				 , A.URL AS url
+				 , A.PORT AS port
+				 , A.API_KEY AS apiKey
+				 , A.USED_YN AS usedYn
+				 , A.CREATE_DATE AS createDate
+				 , A.CREATE_USER AS userId
+				 , D.USER_NM AS userNm
+				 , A.OPENAPI_ID AS openapiId
+			  FROM TN_OPENAPI_INFO A 
+			       LEFT JOIN LETTCCMMNDETAILCODE B ON A.CATEGORY = B.CODE AND B.CODE_ID = 'COM031' 
+				   LEFT JOIN COMVNUSERMASTER D ON A.CREATE_USER = D.USER_ID
+			 WHERE 1=1	
+			   AND A.OPENAPI_ID = #openapiId#		 			 		
+		]]>				
+	</select>	
+ 	
+</sqlMap>

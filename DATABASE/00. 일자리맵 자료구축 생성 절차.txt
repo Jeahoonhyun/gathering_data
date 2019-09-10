@@ -1,0 +1,75 @@
+* 일자리맵 자료구축 생성 절차
+
+1. 테이블 및 기초데이터 생성
+  => LBDMS(Postgresql) 테이블 생성
+    -> 01. 일자리맵_DB생성_스크립트_postgresql.sql 실행
+    -> 02. 공통코드테이블생성_기초데이터.sql 실행[공통코드테이블 없으면 Create table 실행]
+  => 2017년 사업체 기초자료 생성
+    -> 테이블 생성
+    CREATE TABLE jobsvc.saupche_tb_2017_refine
+	(
+	    crn character varying(10),
+	    indust_class character varying(6)
+	)
+    -> 기초자료 Import[Seperator:|]
+    saupche_tb_2017_refine.txt
+
+2. Function 생성
+  => 정제/집계 함수 생성
+    -> 01. 워크넷_인크루트_일자리_정제_구축.sql 생성
+    -> 02. 일자리_가공_집계_구축.sql 생성
+
+    
+select distinct(b_class_cd) from cmm_cd_comcd limit 100;
+"CORPSZ"
+"CGS03S"
+"ENTTYP"
+"WAGETY"
+"CGS06S"
+"CGS10C"
+"CGS06C"
+"CGS01S"
+"CGS02S"
+"JDS04C"
+"CGS05S"
+"CGS07S"
+"JODADI"
+"JDS01C"
+"CGS07C"
+"CGS08C"
+"JDS02C"
+"JDS02S"
+"WGTY_H"
+"WORKTY"
+"CGS09S"
+"WRMTYP"
+"CGS04S"
+"JDS01S"
+"WGTY_Y"
+"CAREER"
+"ACDMCR"
+"CGS08S"
+"WGTY_D"
+"JDS03S"
+"IRCRJS"
+"CGS05C"
+"CGS01C"
+"JDS04"
+"CGSTYP"
+"WNTJPL"
+"WGTY_M"
+"CGS10S"
+"CGS03C"
+"RCRJSS"
+"NCSBIZ"
+"INDCLA"
+"JDS04S"
+"EMPTYP"
+"CGSTAR"
+"CGS02C"
+"JDS03C"
+"JDS03"
+"JDSTYP"
+"CGS09C"
+"JDSTAR"
+"CGS04C"
